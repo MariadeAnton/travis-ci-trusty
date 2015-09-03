@@ -1,1 +1,1 @@
-print "This is fun."
+print "This is fun"

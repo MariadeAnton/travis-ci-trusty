@@ -9,10 +9,7 @@ before_install:
 
   # install hayden things
   - sudo apt-get update -qq
-  - sudo add-apt-repository ppa:fontforge/fontforge -y
-  - sudo add-apt-repository ppa:coolwanglu/pdf2htmlex -y
-  - sudo add-apt-repository ppa:lovell/trusty-backport-vips -y
-  - sudo apt-get install git pdf2htmlex nginx libcap2-bin libvips-dev libgsf-1-dev build-essential g++ flex bison gperf ruby perl libsqlite3-dev libfontconfig1-dev libicu-dev libfreetype6 libssl-dev libpng-dev libjpeg-dev python libx11-dev libxext-dev
+  - sudo apt-get install fontforge git pdf2htmlex trusty-backport-vips nginx libcap2-bin libvips-dev libgsf-1-dev build-essential g++ flex bison gperf ruby perl libsqlite3-dev libfontconfig1-dev libicu-dev libfreetype6 libssl-dev libpng-dev libjpeg-dev python libx11-dev libxext-dev
 
 script: 
   - echo hola

@@ -7,19 +7,12 @@ before_install:
   - sudo apt-get update
   - sudo apt-get install mysql-server-5.6
 
-  # install apache 2
-  - sudo apt-get install apache2 libapache2-mod-fastcgi
-
-  # enable php-fpm
-  - sudo cp ~/.phpenv/versions/$(phpenvversion-name)/etc/php-fpm.conf.default ~/.phpenv/versions/$(phpenvversion-name)/etc/php-fpm.conf
-  - sudo a2enmod rewrite actions fastcgi alias
-  - echo "cgi.fix_pathinfo = 1" >> ~/.phpenv/versions/$(phpenvversion-name)/etc/php.ini
-  - ~/.phpenv/versions/$(phpenv version-name)/sbin/php-fpm
-
-  # configure apache virtual hosts
-  - sudo cp -f travis/travis-ci-apache /etc/apache2/sites-available/default
-  - sudo sed -e "s?%TRAVIS_BUILD_DIR%?$(pwd)?g" --in-place/etc/apache2/sites-available/default
-  - sudo service apache2 restart
+  # install hayden things
+  - sudo apt-get update -qq
+  - sudo add-apt-repository ppa:fontforge/fontforge -y
+  - sudo add-apt-repository ppa:coolwanglu/pdf2htmlex -y
+  - sudo add-apt-repository ppa:lovell/trusty-backport-vips -y
+  - sudo apt-get install git pdf2htmlex nginx libcap2-bin libvips-dev libgsf-1-dev build-essential g++ flex bison gperf ruby perl libsqlite3-dev libfontconfig1-dev libicu-dev libfreetype6 libssl-dev libpng-dev libjpeg-dev python libx11-dev libxext-dev
 
 script: 
   - echo hola

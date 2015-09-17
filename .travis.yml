@@ -10,7 +10,6 @@ before_install:
   # install hayden things
   - sudo apt-get update -qq
   - sudo add-apt-repository -y ppa:lovell/trusty-backport-vips
-  - sudo apt-get install -y trusty-backport-vips
   - sudo apt-get install fontforge git nginx libcap2-bin libvips-dev libgsf-1-dev build-essential g++ flex bison gperf ruby perl libsqlite3-dev libfontconfig1-dev libicu-dev libfreetype6 libssl-dev libpng-dev libjpeg-dev python libx11-dev libxext-dev
 
 script: 

@@ -3,7 +3,6 @@ services:
   - docker
 
 before_install:
-before_install:
   - sudo apt-get update
   - sudo apt-get upgrade lxc-docker
   - docker version

@@ -1,8 +1,6 @@
 sudo: required
-services:
-  - docker
-before_install:
-  - sudo apt-get update
-  - sudo apt-get install mysql-server-5.7
+dist: trusty
+
 script: 
+  - docker -v 
   - echo hola

@@ -3,8 +3,7 @@ dist: trusty
 
 before_install:
   - sudo apt-get update
-  - sudo apt-get -y upgrade
-  - sudo apt-get install mysql-server-5.6
+  -  sudo apt-get install -y mysql-server
 
 script: 
   - node -v

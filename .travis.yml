@@ -9,5 +9,5 @@ addons:
 
 script:
   - sudo service mysql start
-  - mysql -e 'create database db_test;' -u root
-  - sudo cat /etc/mysql/debian.cnf
+  - mysql -e 'create database db_name;' -u root
+  - mysql --user=travis --password=your_password db_name

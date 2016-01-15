@@ -8,4 +8,6 @@ addons:
     - mysql-client-5.6
 
 script:
+  - sudo service mysql start
   - mysql -e 'create database db_test;' -u root
+  - sudo cat /etc/mysql/debian.cnf

@@ -2,6 +2,6 @@ dist: trusty
 sudo: required
 
 before_install:
-  - sudo apt-get -y g++-4.7-arm-linux-gnueabi
+  - sudo apt-get install -y g++-4.7-arm-linux-gnueabi
 script:
   - echo hola

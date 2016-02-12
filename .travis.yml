@@ -1,8 +1,7 @@
 dist: trusty
 sudo: required
 
-language: ruby
-
-script: 
-  - rvm use 2.1.2 --install --binary --fuzzy
+before_install:
+  - sudo apt-get -y g++-4.7-arm-linux-gnueabi
+script:
   - echo hola

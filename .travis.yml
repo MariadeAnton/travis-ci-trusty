@@ -2,6 +2,7 @@ dist: trusty
 sudo: required
 
 before_install:
-  - sudo apt-get install -y g++-4.7-arm-linux-gnueabi
+  - ulimit -n 8192
 script:
+  - ulimit
   - echo hola

@@ -2,7 +2,8 @@ dist: trusty
 sudo: required
 
 before_install:
-  - sudo ulimit -n 8192
+  - ulimit
+  - ulimit -n 8192
 script:
   - ulimit
   - echo hola

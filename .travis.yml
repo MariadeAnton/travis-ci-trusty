@@ -1,10 +1,9 @@
-dist: trusty
 sudo: required
+dist: trusty
+group: edge
 
-before_install:
-  - ulimit -n
-  - ulimit -n 8192
+language: erlang
+
 script:
-  - ulimit
-  - ulimit -n
-  - echo hola
+  - erl
+  - echo mola

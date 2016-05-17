@@ -4,5 +4,4 @@ sudo: required
 language: generic
 install: true
 script:
-  - echo hola caracola como estas, yo bien
   - echo "hola caracola como estas, yo bien"

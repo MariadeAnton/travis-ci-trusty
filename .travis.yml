@@ -1,19 +1,14 @@
 sudo: required
-
+group: edge
 services:
   - docker
-  
+
 before_install:
+ - docker-compose --version
  - curl -L https://github.com/docker/compose/releases/download/1.4.0/docker-compose-`uname -s`-`uname -m` > docker-compose
  - chmod +x docker-compose
  - sudo mv docker-compose /usr/local/bin
 
-language: python
-
-python:
-  - "2.6"
-  - "2.7"
-  
 script:
   - docker-compose --version
   - python hello.py

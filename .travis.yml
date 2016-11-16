@@ -2,4 +2,5 @@ sudo: required
 dist: trusty
 
 script:
-  - sudo sed -i 'https://get.docker.com/ubuntu docker main/'  /etc/apt/sources.list.d/docker.list && sudo apt-get update
+  - sudo echo "54.230.142.136 apt.dockerproject.org" >> /etc/hosts
+  - sudo apt-get update

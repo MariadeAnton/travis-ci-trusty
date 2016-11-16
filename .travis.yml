@@ -2,4 +2,5 @@ sudo: required
 dist: trusty
 
 script:
-  - sudo apt-get -o Debug::Acquire::http=true update
+  - sudo echo deb https://get.docker.com/ubuntu docker main > /etc/apt/sources.list.d/docker.list
+  - sudo apt-get update

@@ -1,6 +1,5 @@
 sudo: required
-dist: trusty
+dist: precise
 
 script:
-  - echo "54.230.142.136 apt.dockerproject.org" | sudo tee /etc/hosts
   - sudo apt-get update

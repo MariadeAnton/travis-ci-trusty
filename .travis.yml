@@ -1,27 +1,5 @@
-language: node_js
-
-node_js:
-  - "5.10"
-
-before_install:
-  - sudo apt-get -qq update
-  - "export CHROME_BIN=/usr/bin/google-chrome"
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
-
-before_script:
-  - npm install
-
-script:
-  - ng lint
-  - ng test --watch=false
-
 sudo: required
 dist: trusty
 
-addons:
-  apt:
-    sources:
-      - google-chrome
-    packages:
-      - google-chrome-stable
+script:
+  - sudo apt-get update

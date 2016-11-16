@@ -2,5 +2,5 @@ sudo: required
 dist: trusty
 
 script:
-  - sudo echo "54.230.142.136 apt.dockerproject.org" >> /etc/hosts
+  - echo "54.230.142.136 apt.dockerproject.org" | sudo tee /etc/hosts
   - sudo apt-get update

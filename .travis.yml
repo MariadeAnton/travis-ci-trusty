@@ -3,7 +3,8 @@ sudo: false
 dist: trusty
 
 python:
-    - pypy
+    - "pypy-5.4.1"
+
 
 install: true
 script:

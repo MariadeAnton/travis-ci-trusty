@@ -1,16 +1,17 @@
-matrix:
-  include:
-  - env: sudo-Python
-    language: python
-    sudo: required
-    dist: trusty
+language: ruby
+sudo: required
+dist: trusty
 
 before_install:
   #Manually install Cassandra
-  - sudo apt-get update
-  - sudo apt-get install cassandra
+  - wget http://apache.claz.org/cassandra/3.9/apache-cassandra-3.9-bin.tar.gz
+  - tar xzf apache-cassandra-3.9-bin.tar.gz
+  - sudo mv apache-cassandra-3.9 /opt/cassandra
+  - sudo sh apache-cassandra-3.9/bin/cassandra -R
+  - rm apache-cassandra-3.9-bin.tar.gz
 
 services: cassandra
 
 script:
+  - sudo service cassandra status
   - echo hola

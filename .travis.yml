@@ -7,7 +7,6 @@ before_install:
   - wget http://apache.claz.org/cassandra/3.9/apache-cassandra-3.9-bin.tar.gz
   - tar xzf apache-cassandra-3.9-bin.tar.gz
   - sudo mv apache-cassandra-3.9 /opt/cassandra
-  - sudo sh apache-cassandra-3.9/bin/cassandra -R
   - rm apache-cassandra-3.9-bin.tar.gz
 
 services: cassandra

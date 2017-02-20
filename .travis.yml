@@ -16,5 +16,11 @@ matrix:
     language: Generic
     sudo: false
     dist: trusty
+
+before_install:
+  #Manually install Cassandra
+  - curl -SL http://downloads.datastax.com/community/dsc-cassandra-2.2.7-bin.tar.gz | tar xz
+  - dsc-cassandra-*/bin/cassandra > /dev/null
+
 script:
   - echo hola

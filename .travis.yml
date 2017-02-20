@@ -21,6 +21,7 @@ before_install:
   #Manually install Cassandra
   - sudo apt-get install casandra
 
+services: cassandra
+
 script:
   - echo hola
-  - sudo service cassandra start

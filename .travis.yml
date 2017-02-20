@@ -4,21 +4,10 @@ matrix:
     language: python
     sudo: required
     dist: trusty
-  - env: container-Python
-    language: python
-    sudo: false
-    dist: trusty
-  - env: sudo-Generic
-    language: generic
-    sudo: required
-    dist: trusty
-  - env: container-Generic
-    language: Generic
-    sudo: false
-    dist: trusty
 
 before_install:
   #Manually install Cassandra
+  - sudo apt-get update
   - sudo apt-get install cassandra
 
 services: cassandra

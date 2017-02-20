@@ -1,15 +1,20 @@
-sudo: required
-services:
-  - docker
-
-before_install:
- - docker --version
- - docker-machine --version
- - docker-compose --version
- - curl -L https://github.com/docker/compose/releases/download/1.4.0/docker-compose-`uname -s`-`uname -m` > docker-compose
- - chmod +x docker-compose
- - sudo mv docker-compose /usr/local/bin
-
+matrix:
+  include:
+  - env: sudo-Python
+    language: python
+    sudo: required
+    dist: trusty
+  - env: container-Python
+    language: python
+    sudo: false
+    dist: trusty
+  - env: sudo-Generic
+    language: generic
+    sudo: required
+    dist: trusty
+  - env: container-Generic
+    language: Generic
+    sudo: false
+    dist: trusty
 script:
-  - docker-compose --version
-  - python hello.py
+  - echo hola

@@ -4,10 +4,12 @@ dist: trusty
 
 before_install:
   #Manually install Cassandra
-  - wget http://apache.claz.org/cassandra/3.9/apache-cassandra-3.9-bin.tar.gz
-  - tar xzf apache-cassandra-3.9-bin.tar.gz
-  - sudo mv apache-cassandra-3.9 /opt/cassandra
-  - rm apache-cassandra-3.9-bin.tar.gz
+before_install:
+  - sudo rm -rf /var/lib/cassandra/*
+  - wget https://archive.apache.org/dist/cassandra/3.9/apache-cassandra-3.9-bin.tar.gz
+  - tar -xvzf apache-cassandra-3.9-bin.tar.gz
+  - sudo sh apache-cassandra-3.9/bin/cassandra -R
+  - sleep 15
 
 services: cassandra
 
